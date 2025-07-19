@@ -112,9 +112,9 @@ const Indexpage = () => {
 
       {/* Section 1 */}
       <div ref={containerRef}>
-        <div className='bg-[#FE5E33] h-[95dvh] overflow-hidden relative'>
+        <div className='bg-[#FE5E33] h-[100dvh] md:h-[95dvh] overflow-hidden relative'>
           {/* Mobile Text Block */}
-          <div className='absolute md:hidden top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[65px] leading-[1.1] text-center z-30'>
+          <div className='absolute md:hidden top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[65px] leading-[1.1] text-center z-30'>
             <h1 className='text-white text-left-entry' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>FU*K</h1>
             <h1 className='text-[65px] text-white text-right-entry' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>REGULAR</h1>
             <h1 className='text-white text-left-entry' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>SODA</h1>
@@ -170,7 +170,7 @@ const Indexpage = () => {
           </p>
         </div>
 
-        <div ref={iconsRef} className='flex flex-wrap md:gap-20 justify-center'>
+        <div ref={iconsRef} className='flex flex-wrap gap-5 md:gap-20 justify-center'>
           <div className='feature-icon  flex flex-col items-center'>
             <img src={Icon_1} alt='Low Sugar' />
             <p className='text-xl text-center mt-2' style={{ fontFamily: 'HelveticaNowText-Medium, sans-serif' }}>Low Sugar</p>
@@ -192,7 +192,7 @@ const Indexpage = () => {
       {/* Seaction 3 */}
       <div className='pt-22 container mx-auto'>
          <div className='lg:w-[80%] px-5 mx-auto '>
-           <h1 className='text-3xl md:text-5xl lg:text-6xl text-center font-bold' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>What makes us a “Misfit” <br/>in the soda industry?</h1>
+           <h1 className='text-4xl md:text-5xl lg:text-6xl text-center font-bold' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>What makes us a “Misfit” <br className='hidden md:block'/>in the soda industry?</h1>
            <div className='pt-8 md:pt-16'>
              <HomePageCardSection/>
            </div>

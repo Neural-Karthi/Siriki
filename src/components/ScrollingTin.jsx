@@ -13,20 +13,22 @@ const ScrollingTin = () => {
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768
-    const scrollDistance = isMobile ? 750 : 1540 // in pixels
+    const scrollDistance = isMobile ? 560 : 1540
+    const startValue = isMobile ? 'top -70%' : 'top 70%'
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
         imageRef.current,
-        { y: -550 },
+        { y: -850 },
         {
           y: scrollDistance,
           ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top 50%',
-            end: 'bottom bottom',
+            start: startValue, // ✅ Conditionally use 'top 70%' or 'top top'
+            end: () => `+=${scrollDistance}`,
             scrub: true,
+            // markers: true, // Uncomment to debug
           },
         }
       )
@@ -38,7 +40,7 @@ const ScrollingTin = () => {
   return (
     <div
       ref={containerRef}
-      className='h-[1200px] md:h-[2160px] overflow-hidden w-full flex justify-center items-start relative py-2'
+      className='h-[1000px] md:h-[2160px] overflow-hidden w-full flex justify-center items-start relative py-2'
     >
       <img
         ref={imageRef}
@@ -46,6 +48,7 @@ const ScrollingTin = () => {
         alt='Soda Can'
         className='w-[275px] absolute z-30 md:w-[350px]'
       />
+
       <div className='absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 z-40 w-full'>
         <img
           src={strip1}
@@ -54,8 +57,14 @@ const ScrollingTin = () => {
         />
         <img src={strip} alt='' className='w-full' />
       </div>
+
       <div className='absolute bottom-0 z-0'>
-        <h1 style={{ fontFamily: 'OntrobucjDemo, sans-serif' }} className='text-[150px] lg:text-[350px] text-[#FE5E33]'>SIRIK</h1>
+        <h1
+          style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}
+          className='text-[150px] lg:text-[350px] text-[#FE5E33]'
+        >
+          SIRIK
+        </h1>
       </div>
     </div>
   )

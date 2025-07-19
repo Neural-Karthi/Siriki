@@ -89,7 +89,7 @@ const HomePageCardSection = () => {
                 {card.description}
               </p>
             </div>
-            <div className=' flex h-full items-end justify-end'>
+            <div className=' flex h-full items-end w-full md:w-auto justify-end'>
               <img src={card.image} alt='card-img' className='w-[100px] md:w-[130px]' />
             </div>
           </div>
