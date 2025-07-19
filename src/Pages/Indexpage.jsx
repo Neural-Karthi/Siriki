@@ -12,7 +12,7 @@ import Icon_4 from '../assets/images/Icons/Icon_4.svg'
 import HomePageCardSection from '../components/HomePageCardSection'
 import ScrollingTin from '../components/ScrollingTin'
 import ProductSection from '../components/ProductSection'
-const Home = () => {
+const Indexpage = () => {
   const containerRef = useRef(null)
   const imageRef = useRef(null)
   const stripRef = useRef(null)
@@ -206,4 +206,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Indexpage

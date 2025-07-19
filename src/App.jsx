@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import Indexpage from './Pages/Indexpage'
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Indexpage/>} />
       </Routes>
     </Router>
   );
