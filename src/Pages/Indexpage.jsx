@@ -15,6 +15,8 @@ import ProductSection from '../components/ProductSection'
 import Reviews from '../components/Reviews'
 import WavyScrollText from '../components/WavyScrollText'
 import Journey from '../components/Journey'
+import Footer from '../components/Footer'
+
 const Indexpage = () => {
   const containerRef = useRef(null)
   const imageRef = useRef(null)
@@ -210,6 +212,9 @@ const Indexpage = () => {
         <WavyScrollText/>
       </div>
       <Journey/>
+      <div className='w-full bg-[#7E27FF]'>
+        <Footer/>
+      </div>
     </div>
   )
 }
