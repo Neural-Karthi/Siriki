@@ -12,6 +12,9 @@ import Icon_4 from '../assets/images/Icons/Icon_4.svg'
 import HomePageCardSection from '../components/HomePageCardSection'
 import ScrollingTin from '../components/ScrollingTin'
 import ProductSection from '../components/ProductSection'
+import Reviews from '../components/Reviews'
+import WavyScrollText from '../components/WavyScrollText'
+import Journey from '../components/Journey'
 const Indexpage = () => {
   const containerRef = useRef(null)
   const imageRef = useRef(null)
@@ -153,7 +156,7 @@ const Indexpage = () => {
       {/* Section 3 - Banner */}
       <div className='w-full h-[450px] md:h-[750px] pt-10 relative'>
         <img src={Section_Banner} alt='' className='w-full h-full object-cover' />
-        <img src={Wave} alt='' className='absolute bottom-0 z-50 w-full' />
+        {/* <img src={Wave} alt='' className='absolute bottom-0 z-50 w-full' /> */}
       </div>
 
       {/* Section 4 - Features */}
@@ -202,6 +205,11 @@ const Indexpage = () => {
          <ScrollingTin/>
       </div>
       <ProductSection/>
+      <Reviews/>
+      <div className='overflow-hidden py-5 md:py-10'>
+        <WavyScrollText/>
+      </div>
+      <Journey/>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const ProductSection = () => {
 
   return (
     <div className="bg-[#FFDDD4] p-6 font-sans text-black">
-      <div className="w-full max-w-[900px] py-5 mx-auto">
+      <div className="w-full max-w-[1200px] py-5 mx-auto">
 
         <Collapse
           defaultActiveKey={['1']}
