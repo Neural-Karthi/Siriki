@@ -58,7 +58,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
         <div className="flex flex-col items-center md:items-start">
-          <h1 className="text-8xl mb-4 font-bold text-[#ffffff]">Siriki.</h1>
+          <h1 className="text-8xl mb-4 font-bold text-[#ffffff]">Sirik.</h1>
           <div className="flex gap-4 mt-2">
             <img src={Social_icon_1} alt="Facebook" className="w-5 h-5 cursor-pointer" />
             <img src={Social_icon_2} alt="Instagram" className="w-5 h-5 cursor-pointer" />

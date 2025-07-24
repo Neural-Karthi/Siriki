@@ -22,9 +22,7 @@ I was pushed down, deep into a place with no light, no clarity — just noise an
 That’s where SIRIK was born.Not from a market trend or branding playbook — but from pure, unfiltered fire. This isn’t just a beverage brand.It’s proof that you can be broken, underestimated, even forgotten —And still rise. Sharper than ever.
 I didn’t come from a boardroom.I came from the fire.
          </p>
-         <div className="container mx-auto">
-            <img src={aboutus_main} className="w-full" alt=""/>
-         </div>
+        
       </div>
       <div className="mx-auto container pt-12 px-5">
          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white" style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>The SIRIK Journey:</h1>

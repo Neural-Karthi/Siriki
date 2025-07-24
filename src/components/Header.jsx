@@ -35,14 +35,14 @@ const Header = (props) => {
         </nav>
 
         {/* Shopping Cart Icon */}
-        <div className='relative cursor-pointer' onClick={() => navigate('/cart')}>
+        {/* <div className='relative cursor-pointer' onClick={() => navigate('/cart')}>
           <ShoppingCartOutlined className='text-3xl' />
           {cartCount > 0 && (
             <span className={`absolute -top-1 -right-2 ${props.darkcolor?'bg-[#008cff] text-white':'bg-red-500'}  text-xs w-5 h-5 flex items-center justify-center rounded-full`}>
               {cartCount}
             </span>
           )}
-        </div>
+        </div> */}
       </div>
     </header>
   )
