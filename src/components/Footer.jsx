@@ -36,7 +36,7 @@ const Footer = () => {
 
         {/* Subscribe */}
         <div className='col-span-2'>
-          <h3 className="font-semibold mb-3 text-[20px] text-[#fff]">Subscribe</h3>
+          {/* <h3 className="font-semibold mb-3 text-[20px] text-[#fff]">Subscribe</h3>
           <p className="text-sm text-[#ffffff] mb-3">Join our community to receive updates</p>
           <div className="flex items-center bg-gray-100 rounded-full px-3 py-2 w-full">
             <input
@@ -48,7 +48,7 @@ const Footer = () => {
               Subscribe
             </button>
           </div>
-          <p className="text-[14px] text-[#ffffff] mt-2">By subscribing, you agree to our <span className="underline">Privacy Policy</span></p>
+          <p className="text-[14px] text-[#ffffff] mt-2">By subscribing, you agree to our <span className="underline">Privacy Policy</span></p> */}
         </div>
       </div>
 

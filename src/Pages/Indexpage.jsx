@@ -105,7 +105,7 @@ const Indexpage = () => {
   }, [])
 
   return (
-    <div className='relative cursor-default'>
+    <div className='relative overflow-hidden cursor-default'>
       <div className='absolute top-0 z-50 w-full'>
         <Header />
       </div>
@@ -174,9 +174,9 @@ const Indexpage = () => {
         </div>
       </div>
       {/* Seaction 3 */}
-      <div className='pt-22 container mx-auto'>
+      <div className='pt-22 container overflow-hidden mx-auto'>
          <div className='lg:w-[80%] px-5 mx-auto '>
-           <h1 className='text-4xl md:text-5xl lg:text-6xl text-center font-bold' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>Meet the Mind<br className='hidden md:block'/>Behind the Madness</h1>
+           <h1 className='text-3xl md:text-5xl lg:text-6xl text-center font-bold' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>Meet the Mind<br className='hidden md:block'/>Behind the Madness</h1>
          </div>
       </div>
       <ScrollCards/>
