@@ -7,8 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const features = [
   { text: "LOW SUGAR - 4G", bg: "#C6DA55", color: "#fff" },
   { text: "7G prebiotic fibers", bg: "#13006E", color: "#111" },
-  { text: "Low Calories", bg: "#FF5E2D", color: "#fff" },
-  { text: "LACTOSE FREE", bg: "#C6DA55", color: "#111" },
+  { text: "Low Calories", bg: "#FF5E2D", color: "#fff" }
 ];
 
 export default function ScrollCards() {

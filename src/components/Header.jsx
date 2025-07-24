@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MenuOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { Link, useNavigate } from 'react-router-dom';
-import companylogo from '../assets/images/logo.webp';
+import companylogo from '../assets/images/companylogo.svg';
 
 const Header = (props) => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const Header = (props) => {
             src={companylogo}
             alt='Company Logo'
             onClick={() => navigate('/')}
-            className='w-[120px] object-contain cursor-pointer'
+            className='w-[150px] md:w-[180px] cursor-pointer'
           />
         </div>
 
