@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className=" text-[14px] pb-10 text-[#fffff] text-center md:text-end mt-4">© 2024 Siriki. All rights reserved. | ❤ Developed by Build Your Vision </p>
+      <p className=" text-[14px] pb-10 text-[#fffff] text-center md:text-end mt-4">© 2024 Sirik. All rights reserved. | ❤ Developed by Build Your Vision </p>
     </div>
   );
 };
