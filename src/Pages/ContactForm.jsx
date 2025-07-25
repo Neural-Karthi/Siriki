@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact_image from '../assets/images/AboutUsImage.png';
@@ -21,6 +22,8 @@ const FormSchema = z.object({
 const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [loader, setLoader] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
   const maxChars = 500;
 
   const {
@@ -33,38 +36,37 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (customer_data) => {
-  const payload = {
-    access_key: "13d8cef3-89a2-4635-82ec-d963bb9d41bc",
-    Name: customer_data.Name,
-    Email: customer_data.EmailID,
-    Phone: customer_data.Phone,
-    Subject: "Contact Form",
-    Message: customer_data.Message,
-  };
+    const payload = {
+      access_key: "12004621-0bf6-40d5-a190-2f11fd4f32c1",
+      Name: customer_data.Name,
+      Email: customer_data.EmailID,
+      Phone: customer_data.Phone,
+      Subject: "Contact Form",
+      Message: customer_data.Message,
+    };
 
-  try {
-    setLoader(true);
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    try {
+      setLoader(true);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    const result = await response.json();
-    if (result.success) {
-      alert("Message sent successfully!");
-      reset();
-      setMessage("");
-    } else {
-      alert("Failed to send message.");
+      const result = await response.json();
+      if (result.success) {
+        setShowModal(true);
+        reset();
+        setMessage("");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      alert("Something went wrong while sending the message.");
+    } finally {
+      setLoader(false);
     }
-  } catch (error) {
-    alert("Something went wrong while sending the message.");
-  } finally {
-    setLoader(false);
-  }
-};
-
+  };
 
   return (
     <>
@@ -134,7 +136,7 @@ const ContactForm = () => {
               <FaPhone className="text-[#949494] mr-3" />
               <input
                 type="tel"
-                placeholder="+44 (000) 000-0000"
+                placeholder="+91 000 000 0000"
                 className="bg-transparent outline-none w-full text-black"
                 {...register("Phone")}
                 maxLength={10}
@@ -204,6 +206,27 @@ const ContactForm = () => {
       </div>
 
       {loader && <Loader />}
+
+      {/* Success Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999] flex items-center justify-center">
+          <div className="bg-white p-6 rounded-xl text-center max-w-sm w-full mx-4">
+            <h2 className="text-xl font-semibold mb-2 text-gray-800">Thank You!</h2>
+            <p className="text-gray-600 mb-4">
+              Your form has been submitted. We will contact you soon.
+            </p>
+            <button
+              onClick={() => {
+                setShowModal(false);
+                navigate("/");
+              }}
+              className="bg-[#7A5CFA] cursor-pointer hover:bg-[#694ae0] text-white px-6 py-2 rounded-lg"
+            >
+              Okay
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

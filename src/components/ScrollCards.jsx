@@ -5,9 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const features = [
-  { text: "LOW SUGAR - 4G", bg: "#C6DA55", color: "#fff" },
-  { text: "7G prebiotic fibers", bg: "#13006E", color: "#111" },
-  { text: "Low Calories", bg: "#FF5E2D", color: "#fff" }
+  { text: "LOW SUGAR", bg: "#C6DA55", color: "#111" },
+  { text: "7G prebiotic fibers", bg: "#C6DA55", color: "#111" },
+  { text: "Low Calories", bg: "#C6DA55", color: "#111" },
+  { text: "Zero Preservatives", bg: "#C6DA55", color: "#111" },
+  { text: "Vegan", bg: "#C6DA55", color: "#111" }
 ];
 
 export default function ScrollCards() {

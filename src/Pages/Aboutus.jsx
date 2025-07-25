@@ -44,7 +44,7 @@ Welcome to SIRIK.The soda that doesn’t make you choose between vibe and value.
       </div>
       
       <div className="w-full pt-22 overflow-hidden">
-        <img src={Contact_image} alt="" className="w-full"/>
+        {/* <img src={Contact_image} alt="" className="w-full"/> */}
       </div>
       </div>
       <div className='w-full bg-gradient-to-br from-[#0F0F1C] to-[#1F1147]'>

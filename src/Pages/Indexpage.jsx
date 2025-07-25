@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 import Section_2 from '../components/Section_2' 
 import ScrollCards from '../components/ScrollCards'
 import MomentsMovement from '../components/MomentsMovement'
-
+import image_data from '../assets/images/Review_Image.png';
 const Indexpage = () => {
   const containerRef = useRef(null)
   const imageRef = useRef(null)
@@ -105,7 +105,7 @@ const Indexpage = () => {
   }, [])
 
   return (
-    <div className='relative overflow-hidden cursor-default'>
+    <div className='relative overflow-hidden bg-[#FDF2DD] cursor-default'>
       <div className='absolute top-0 z-50 w-full'>
         <Header />
       </div>
@@ -149,7 +149,7 @@ const Indexpage = () => {
             Most fizzy drinks are fun — until you read the label. Sugar bombs. Chemical sweeteners. Fake flavours. Preservatives you can't pronounce.
             We were done with it. That's where SIRIK comes in. We're not here to cancel soda — we're here to redefine it. SIRIK is a new-age carbonated drink
             built for people who want the fizz, the flavour, the vibe — without the guilt. We use real, natural ingredients like Nannari root,
-            known for its cooling and gut-friendly properties, and pair it with zero sugar, no preservatives, prebiotics, and clean flavours that actually taste good.
+            known for its cooling and gut-friendly properties, and pair it with Low sugar, no preservatives, prebiotics, and clean flavours that actually taste good.
             Whether you're finishing a workout, grabbing lunch, or just craving something cold — SIRIK gives you that same satisfying soda kick, just cleaner.
           </p>
         </div>
@@ -174,11 +174,34 @@ const Indexpage = () => {
         </div>
       </div>
       {/* Seaction 3 */}
-      <div className='pt-22 container overflow-hidden mx-auto'>
-         <div className='lg:w-[80%] px-5 mx-auto '>
-           <h1 className='text-3xl md:text-5xl lg:text-6xl text-center font-bold' style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>Meet the Mind<br className='hidden md:block'/>Behind the Madness</h1>
-         </div>
-      </div>
+     <div className="pt-20 px-4 container mx-auto overflow-hidden">
+  <div className="bg-white rounded-2xl flex flex-col lg:flex-row py-5 px-4 md:px-8 lg:w-[80%] mx-auto">
+    {/* Image Section */}
+    <div className="flex-1 mb-6 lg:mb-0">
+      <img src={image_data} alt="" className="w-full h-full object-cover rounded-2xl" />
+    </div>
+
+    {/* Text Section */}
+    <div className="flex-1 lg:p-8">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-left pb-3" style={{ fontFamily: 'OntrobucjDemo, sans-serif' }}>
+        Meet the Mind <br className="hidden md:block" />Behind the Madness
+      </h1>
+      <hr className="my-2 border-gray-300" />
+      <p className="text-sm md:text-base lg:text-lg pt-2 text-black/80 leading-relaxed">
+        Hey! I’m Srikar YS — a former engineer, full-time flavour rebel, and unapologetic fizz lover.
+        I didn’t grow up dreaming about beverages. I wasn’t born with a silver can in my hand. I came from chaos.
+        From being let down by others and by the version of myself that forgot my own worth.
+        There were moments I felt like I wasn’t even worth holding on to — easy to leave behind, easy to ignore.
+        I was pushed down, deep into a place with no light, no clarity — just noise and questions.
+        But what I thought was a pit…Turned out to be a forge. “A forge doesn’t save you. It remakes you.” They create weapons. Warriors. Legends.
+        That’s where SIRIK was born. Not from a market trend or branding playbook — but from pure, unfiltered fire.
+        This isn’t just a beverage brand. It’s proof that you can be broken, underestimated, even forgotten — And still rise. Sharper than ever.
+        I didn’t come from a boardroom. I came from the fire.
+      </p>
+    </div>
+  </div>
+</div>
+
       <ScrollCards/>
       
       <div className='overflow-hidden whitespace-nowrap h-[100px] bg-white'>
