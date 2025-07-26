@@ -12,6 +12,9 @@ import Section_2 from '../components/Section_2'
 import ScrollCards from '../components/ScrollCards'
 import MomentsMovement from '../components/MomentsMovement'
 import image_data from '../assets/images/Review_Image.png';
+import { Helmet } from 'react-helmet-async';
+
+
 const Indexpage = () => {
   const containerRef = useRef(null)
   const imageRef = useRef(null)
@@ -106,6 +109,31 @@ const Indexpage = () => {
 
   return (
     <div className='relative overflow-hidden bg-[#FDF2DD] cursor-default'>
+
+<Helmet>
+  <title>SIRIK – Not Your No2</title>
+  <meta name="description" content="Sick of colas and sugar bombs? SIRIK is India’s bold Prebiotic soda—low sugar, gut-friendly, and Nannari-powered. Tradition just got fizzy." />
+  <meta name="keywords" content="Sirik, Prebiotic Soda, Low Sugar Drink, Healthy Fizzy Drink, Nannari Soda, Gut Health, No Preservatives, Indian Soda" />
+  <meta name="author" content="Srikar YS" />
+  
+  {/* Open Graph for social previews */}
+  <meta property="og:title" content="SIRIK – Not Your No2" />
+  <meta property="og:description" content="Sick of colas and sugar bombs? SIRIK is India’s bold Prebiotic soda—low sugar, gut-friendly, and Nannari-powered. Tradition just got fizzy." />
+  <meta property="og:image" content="../assets/images/companylogo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sirikbeverages.com/" />
+  
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SIRIK – Not Your No2" />
+  <meta name="twitter:description" content="India’s bold Prebiotic soda—low sugar, gut-friendly, and Nannari-powered." />
+  <meta name="twitter:image" content="../assets/images/companylogo.png" />
+
+  <link rel="canonical" href="https://sirikbeverages.com/" />
+</Helmet>
+
+
+      
       <div className='absolute top-0 z-50 w-full'>
         <Header />
       </div>
