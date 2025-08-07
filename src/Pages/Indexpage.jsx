@@ -219,7 +219,7 @@ const Indexpage = () => {
 
       <Reviews/>
       <MomentsMovement/>
-      <div className='w-full bg-[#7E27FF]'>
+      <div className='w-full bg-[#13006E]'>
         <Footer/>
       </div>
     </div>

@@ -93,7 +93,7 @@ const ContactForm = () => {
                 href="mailto:hello@sirikbeverages.com"
                 className="text-[#a589f5] underline"
               >
-                hello@sirikbeverages.com
+                 nboxsirik@gmail.com 
               </a>
             </p>
           </div>
