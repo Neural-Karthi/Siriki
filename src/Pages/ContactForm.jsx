@@ -90,7 +90,7 @@ const ContactForm = () => {
             <p className="text-lg">
               Or just reach out manually to{" "}
               <a
-                href="mailto:hello@sirikbeverages.com"
+                href="mailto:Inboxsirik@gmail.com"
                 className="text-[#a589f5] underline"
               >
                  Inboxsirik@gmail.com 
